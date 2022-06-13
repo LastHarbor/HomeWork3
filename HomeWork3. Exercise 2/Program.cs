@@ -6,7 +6,7 @@ namespace HomeWork3._Exercise_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ///Use case
         }
     }
 }
