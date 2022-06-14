@@ -7,9 +7,9 @@ namespace HomeWork3._Exercise_2
     {
         static void Main()
         {
-            Console.WriteLine("Введите имя:"); string player = Console.ReadLine();
+            Console.WriteLine("Введите имя:"); string player = Console.ReadLine(); //Считывание имени игрока
 
-            Console.WriteLine($"Здравствуйте - {player}, сколько у вас карт на руках?");
+            Console.WriteLine($"Здравствуйте - {player}, сколько у вас карт на руках?"); //Приветствие по имени
             int numCards = int.Parse(Console.ReadLine());
             int sum = 0;
             
@@ -17,7 +17,7 @@ namespace HomeWork3._Exercise_2
             {
                 Console.WriteLine("Введите номинал карты - ");
                 string nom = Console.ReadLine();                //nom - номинал карт
-                switch (nom)
+                switch (nom)                                                           //Проверка значения переменной nom
                 {
                     case "2":
                         sum += 2;
@@ -71,15 +71,15 @@ namespace HomeWork3._Exercise_2
                         sum += 10;
                         break;
                     default:
-                        Console.WriteLine("Out of Range");
+                        Console.WriteLine("Out of Range");              //Означает, что введено неверное значение номинала карты.
                         break;
 
 
                 }
             }
-            Console.Clear();
-            if (sum == 21) Console.WriteLine("Сумма карт 21, вы выйграли!");
-            else Console.WriteLine($"Сумма карт - {sum}, вы не выйграли..");
+            Console.Clear(); //Очищение консоли
+            if (sum == 21) Console.WriteLine("Сумма карт 21, вы выйграли!"); //Условия проверки на выйгрыш.
+            else Console.WriteLine($"Сумма карт - {sum}, вы не выйграли..");    
             Console.ReadKey();
         }
     }

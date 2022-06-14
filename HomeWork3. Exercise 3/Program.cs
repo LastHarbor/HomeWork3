@@ -10,10 +10,10 @@ namespace HomeWork3._Exercise_3
             int number = int.Parse(Console.ReadLine());
             int counter = 1;
 
-            while (counter < number - 1)
+            while (counter < number - 1) //Счётчик чисел 
             {
                 counter++;
-                if (number % counter == 0)
+                if (number % counter == 0)   //Проверка условий согласно тз
                 {
                     
                     Console.WriteLine("Число с остатком!");
