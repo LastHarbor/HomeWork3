@@ -7,31 +7,29 @@ namespace HomeWork3._Exercise_3
     {
         static void Main()
         {
-            Console.WriteLine("Введите число - ");
+            Console.Write("Введите число - ");
             int number = int.Parse(Console.ReadLine());
             int counter = 1;
-            bool flag = false;
+            bool isPrime = true;
             
 
             while (counter < number - 1) //Счётчик чисел 
             {
                 counter++;
-                if (number % counter == 0 )   //Проверка условий согласно тз
+                if (number % counter == 0 ) //Проверка условий согласно тз
                 {
-                    flag = true;
+                    isPrime = false;
                     break;
                 }
-                else if(counter%number == 1)
-                {
-                    flag = false;
-                    break;
-                }
-                
+
             }
 
-            if (flag == false) Console.WriteLine("Число простое");
+            Console.WriteLine($"Количество итераций - {counter}\n ");
+
+            if (isPrime) Console.WriteLine("Число простое");
+            
             else Console.WriteLine("Число с остатком");
-            ;
+            
             
             Console.ReadKey();
         }
